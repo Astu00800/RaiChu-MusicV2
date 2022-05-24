@@ -50,21 +50,21 @@ def song(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("❌ song not found.\n\nplease give a valid song name.")
+        m.edit("❌ 𝐒𝐎𝐍𝐆 𝐍𝐎𝐓 𝐅𝐎𝐔𝐍𝐃 𝐅𝐑𝐎𝐌 𝐀𝐒𝐓𝐔 𝐒𝐄𝐑𝐕𝐄𝐑.\n\n𝐆𝐈𝐕𝐄 𝐀 𝐕𝐀𝐋𝐈𝐃 𝐒𝐎𝐍𝐆 𝐍𝐀𝐌𝐄.🎆")
         print(str(e))
         return
-    m.edit("📥 downloading file...")
+    m.edit("📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐅𝐈𝐋𝐄")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**🎧 Uploader @{bn}**"
+        rep = f"**🎧 𝐔𝐏𝐋𝐎𝐀𝐃𝐄𝐑 @{bn}**"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("📤 uploading file...")
+        m.edit("📤 𝐔𝐏𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐅𝐈𝐋𝐄")
         message.reply_audio(
             audio_file,
             caption=rep,
@@ -75,7 +75,7 @@ def song(_, message):
         )
         m.delete()
     except Exception as e:
-        m.edit("❌ error, wait for bot owner to fix")
+        m.edit("❌ 𝐄𝐑𝐑𝐎𝐑, wait for -▶️ᴀꜰᴋ ❛𝗔𝘀𝘁𝘂 [🇮🇳] 𝘅𝗗 to 𝐅𝐈𝐗💥")
         print(e)
 
     try:
@@ -247,14 +247,14 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 **downloading video...**")
+        msg = await message.reply("📥 **𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐕𝐈𝐃𝐄𝐎...**")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
         return await msg.edit(f"🚫 **error:** {e}")
     preview = wget.download(thumbnail)
-    await msg.edit("📤 **uploading video...**")
+    await msg.edit("📤 **𝐔𝐏𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐕𝐈𝐃𝐄𝐎...**")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
@@ -272,16 +272,16 @@ async def vsong(client, message):
 async def lyrics(_, message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("» **give a lyric name too.**")
+            await message.reply_text("» **𝐆𝐈𝐕𝐄 𝐀 𝐋𝐘𝐑𝐈𝐂𝐒 𝐍𝐀𝐌𝐄...**")
             return
         query = message.text.split(None, 1)[1]
-        rep = await message.reply_text("🔎 **searching lyrics...**")
+        rep = await message.reply_text("🔎 **𝐒𝐄𝐀𝐑𝐂𝐇𝐈𝐍𝐆 𝐋𝐘𝐑𝐈𝐂𝐒...**")
         resp = requests.get(
             f"https://api-tede.herokuapp.com/api/lirik?l={query}"
         ).json()
         result = f"{resp['data']}"
         await rep.edit(result)
     except Exception:
-        await rep.edit("❌ **lyrics not found.**\n\n» **please give a valid song name.**")
+        await rep.edit("❌ **𝐋𝐘𝐑𝐈𝐂𝐒 𝐍𝐎𝐓 𝐅𝐎𝐔𝐍𝐃.**\n\n» **𝐆𝐈𝐕𝐄 𝐀 𝐕𝐀𝐋𝐈𝐃 𝐒𝐎𝐍𝐆 𝐍𝐀𝐌𝐄.🎧**")
 
 
