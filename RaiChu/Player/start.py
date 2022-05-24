@@ -39,8 +39,8 @@ async def _human_time_duration(seconds):
 async def start(_, message: Message):
         await message.reply_text(
         f"""Hello, My name is {BOT_NAME}.
-I'm a telegram streaming bot with some useful features.
-Feel free to add me to your groups.
+I'm a telegram streaming bot with some useful features and runniing on a Private VPS Server.
+Feel free to add me to your groups. Created By -▶️ᴀꜰᴋ ❛𝗔𝘀𝘁𝘂 [🇮🇳] 𝘅𝗗 
         """,
         reply_markup=InlineKeyboardMarkup(
             [
