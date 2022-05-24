@@ -120,7 +120,7 @@ async def play(c: Client, m: Message):
                 )
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("📥 **Downloading audio...**")
+            suhu = await replied.reply("📥 **𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐀𝐔𝐃𝐈𝐎...**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -138,7 +138,7 @@ async def play(c: Client, m: Message):
                 await suhu.delete()
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({link}) | `music`\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {m.from_user.mention()}",
+                    caption=f"💡 **𝐓𝐑𝐀𝐂𝐊 𝐀𝐃𝐃𝐄𝐃 𝐓𝐎 𝐐𝐔𝐄𝐔𝐄 »** `{pos}`\n\n🏷 **Name:** [{songname}]({link}) | `music`\n💭 **Chat:** `{chat_id}`\n🎧 **𝐑𝐄𝐐𝐔𝐄𝐒𝐓𝐄𝐃 𝐁𝐘:** {m.from_user.mention()}",
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
             else:
@@ -155,7 +155,7 @@ async def play(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_2}",
-                    caption=f"🏷 **Name:** [{songname}]({link})\n💭 **Chat:** `{chat_id}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}\n📹 **Stream type:** `Music`",
+                    caption=f"🏷 **Name:** [{songname}]({link})\n💭 **Chat:** `{chat_id}`\n💡 **Status:** `𝐏𝐋𝐀𝐘𝐈𝐍𝐆`\n🎧 **𝐑𝐄𝐐𝐔𝐄𝐒𝐓𝐄𝐃 𝐁𝐘:** {requester}\n📹 **𝐒𝐓𝐑𝐄𝐀𝐌 𝐓𝐘𝐏𝐄:** `Music`",
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
              except Exception as e:
@@ -166,7 +166,7 @@ async def play(c: Client, m: Message):
         if len(m.command) < 2:
          await m.reply_photo(
                      photo=f"{IMG_5}",
-                    caption="**Usage: /play Give a Title Song To Play Music or /vplay for Video Play**",
+                    caption="**𝐔𝐒𝐀𝐆𝐄: /play 𝐆𝐈𝐕𝐄 𝐀 𝐓𝐈𝐓𝐋𝐄 𝐒𝐎𝐍𝐆 𝐓𝐎 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐎𝐑 /vplay 𝐅𝐎𝐑 𝐕𝐈𝐃𝐄𝐎 𝐒𝐓𝐑𝐄𝐀𝐌💓**",
                       reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -214,7 +214,7 @@ async def play(c: Client, m: Message):
                         )
                         await m.reply_photo(
                             photo=queueimg,
-                            caption=f"⏳ Added to Queue at {pos}\n\n👤Requested By:{requester}\nInformation- [Here]({info})",
+                            caption=f"⏳ 𝐀𝐃𝐃𝐄𝐃 𝐓𝐎 𝐐𝐔𝐄𝐔𝐄 𝐀𝐓 {pos}\n\n👤𝐑𝐄𝐐𝐔𝐄𝐒𝐓𝐄𝐃 𝐁𝐘:{requester}\n𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍- [Here]({info})",
                             reply_markup=InlineKeyboardMarkup(keyboard),
                         )
                     else:
@@ -234,7 +234,7 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=playimg,
-                                caption=f"📡 Started Streaming Audio 💡\n\n👤Requested By:{requester}\nInformation- [Here]({info})",
+                                caption=f"📡 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐒𝐓𝐑𝐄𝐀𝐌𝐈𝐍𝐆 𝐀𝐔𝐃𝐈𝐎 💡\n\n👤𝐑𝐄𝐐𝐔𝐄𝐒𝐓𝐄𝐃 𝐁𝐘:{requester}\n𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍- [Here]({info})",
                                 reply_markup=InlineKeyboardMarkup(keyboard),
                             )
                         except Exception as ep:
