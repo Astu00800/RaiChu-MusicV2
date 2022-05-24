@@ -111,12 +111,12 @@ async def vplay(c: Client, m: Message):
             pass
         except Exception as e:
             return await m.reply_text(
-                f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
+                f"❌ **𝐔𝐒𝐄𝐑𝐁𝐎𝐓 𝐅𝐀𝐈𝐋𝐄𝐃 𝐓𝐎 𝐉𝐎𝐈𝐍**\n\n**reason**: `{e}`"
             )
 
     if replied:
         if replied.video or replied.document:
-            loser = await replied.reply("📥 **downloading video...**")
+            loser = await replied.reply("📥 **𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐕𝐈𝐃𝐄𝐎...**")
             dl = await replied.download()
             link = replied.link
             if len(m.command) < 2:
@@ -146,7 +146,7 @@ async def vplay(c: Client, m: Message):
                 await m.reply_photo(
                     photo=thumbnail,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({link}) | `video`\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
+                    caption=f"💡 **𝐓𝐑𝐀𝐂𝐊 𝐀𝐃𝐃𝐄𝐃 𝐓𝐎 𝐐𝐔𝐄𝐔𝐄 »** `{pos}`\n\n🗂 **Name:** [{songname}]({link}) | `video`\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
                 )
             else:
                 if Q == 720:
@@ -155,7 +155,7 @@ async def vplay(c: Client, m: Message):
                     amaze = MediumQualityVideo()
                 elif Q == 360:
                     amaze = LowQualityVideo()
-                await loser.edit("🔄 **Joining vc...**")
+                await loser.edit("🔄 **𝐉𝐎𝐈𝐍𝐈𝐍𝐆 𝐕𝐂...**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioVideoPiped(
@@ -183,8 +183,8 @@ async def vplay(c: Client, m: Message):
                       reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📣 Channel", url=f"https://t.me/BotDuniyaXd"),
-                            InlineKeyboardButton("💭 Support", url=f"https://t.me/godzilla_chatting")
+                            InlineKeyboardButton("📣 Channel", url=f"https://t.me/Feeling_of_Astu"),
+                            InlineKeyboardButton("💭 Support", url=f"https://t.me/Chatting_frndship_zone")
                         ],
                         [
                             InlineKeyboardButton("🗑 Close", callback_data="cls")
@@ -193,14 +193,14 @@ async def vplay(c: Client, m: Message):
                 )
             )
             else:
-                loser = await c.send_message(chat_id, f"**Downloading**\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                loser = await c.send_message(chat_id, f"**𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆**\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
                       )
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 Q = 360
                 amaze = HighQualityVideo()
                 if search == 0:
-                    await loser.edit("❌ **no results found.**")
+                    await loser.edit("❌ **𝐍𝐎 𝐑𝐄𝐒𝐔𝐋𝐓𝐒 𝐅𝐎𝐔𝐍𝐃.**")
                 else:
                     songname = search[0]
                     title = search[0]
@@ -227,12 +227,12 @@ async def vplay(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=queueimg,
                                 reply_markup=InlineKeyboardMarkup(buttons),
-                                caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                                caption=f"💡 **𝐓𝐑𝐀𝐂𝐊 𝐀𝐃𝐃𝐄𝐃 𝐓𝐎 𝐐𝐔𝐄𝐔𝐄 »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
                             )
                         else:
                             try:
                                 await loser.edit(
-                            f"**𝘽𝙤𝙩 𝘿𝙪𝙣𝙞𝙮𝙖 Downloader**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
+                            f"**🦋𝓐𝓢𝓣𝓤 𝓓𝓸𝔀𝓷𝓵𝓸𝓪𝓭𝓮𝓻🕊⃝**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
                         )
                                 await call_py.join_group_call(
                                     chat_id,
@@ -265,8 +265,8 @@ async def vplay(c: Client, m: Message):
                       reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📣 Channel", url=f"https://t.me/BotDuniyaXd"),
-                            InlineKeyboardButton("💭 Support", url=f"https://t.me/godzilla_chatting")
+                            InlineKeyboardButton("📣 Channel", url=f"https://t.me/Feeling_of_Astu"),
+                            InlineKeyboardButton("💭 Support", url=f"https://t.me/Chatting_frndship_zone")
                         ],
                         [
                             InlineKeyboardButton("🗑 Close", callback_data="cls")
@@ -275,13 +275,13 @@ async def vplay(c: Client, m: Message):
                 )
             )
         else:
-            loser = await c.send_message(chat_id, f"**Downloading**\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%")
+            loser = await c.send_message(chat_id, f"**𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆**\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
             amaze = HighQualityVideo()
             if search == 0:
-                await loser.edit("❌ **no results found.**")
+                await loser.edit("❌ **𝐍𝐎 𝐑𝐄𝐒𝐔𝐋𝐓𝐒 𝐅𝐎𝐔𝐍𝐃.**")
             else:
                 songname = search[0]
                 title = search[0]
@@ -305,12 +305,12 @@ async def vplay(c: Client, m: Message):
                         await m.reply_photo(
                             photo=queueimg,
                             reply_markup=InlineKeyboardMarkup(buttons),
-                            caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                            caption=f"💡 **𝐓𝐑𝐀𝐂𝐊 𝐀𝐃𝐃𝐄𝐃 𝐓𝐎 𝐐𝐔𝐄𝐔𝐄 »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
                         )
                     else:
                         try:
                             await loser.edit(
-                            f"**𝘽𝙤𝙩 𝘿𝙪𝙣𝙞𝙮𝙖 Downloader**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
+                            f"**🦋𝓐𝓢𝓣𝓤 𝓓𝓸𝔀𝓷𝓵𝓸𝓪𝓭𝓮𝓻🕊⃝**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
                         )
                             await call_py.join_group_call(
                                 chat_id,
@@ -390,7 +390,7 @@ async def vstream(c: Client, m: Message):
             pass
         except Exception as e:
             return await m.reply_text(
-                f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
+                f"❌ **𝐔𝐒𝐄𝐑𝐁𝐎𝐓 𝐅𝐀𝐈𝐋𝐄𝐃 𝐓𝐎 𝐉𝐎𝐈𝐍**\n\n**reason**: `{e}`"
             )
 
     if len(m.command) < 2:
@@ -434,7 +434,7 @@ async def vstream(c: Client, m: Message):
                 await m.reply_photo(
                     photo=f"{IMG_1}",
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"💡 **Track added to queue »** `{pos}`\n\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
+                    caption=f"💡 **𝐓𝐑𝐀𝐂𝐊 𝐀𝐃𝐃𝐄𝐃 𝐓𝐎 𝐐𝐔𝐄𝐔𝐄 »** `{pos}`\n\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
                 )
             else:
                 if Q == 720:
@@ -444,7 +444,7 @@ async def vstream(c: Client, m: Message):
                 elif Q == 360:
                     amaze = LowQualityVideo()
                 try:
-                    await loser.edit("🔄 **Joining vc...**")
+                    await loser.edit("🔄 **𝐉𝐎𝐈𝐍𝐈𝐍𝐆 𝐕𝐂...**")
                     await call_py.join_group_call(
                         chat_id,
                         AudioVideoPiped(
