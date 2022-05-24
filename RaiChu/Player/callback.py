@@ -34,10 +34,10 @@ Feel free to add me to your groups.
                     ),
                   ],[
                     InlineKeyboardButton(
-                       "Updates", url=f"https://t.me/{UPDATES_CHANNEL}"
+                       "Owner❤", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                     InlineKeyboardButton(
-                       "Support", url=f"https://t.me/{GROUP_SUPPORT}"
+                       "Support💫", url=f"https://t.me/{GROUP_SUPPORT}"
                     )
                 ],[
                     InlineKeyboardButton(
